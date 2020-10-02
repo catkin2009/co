@@ -12,7 +12,7 @@
 ## Co v4
 
   `co@4.0.0` has been released, which now relies on promises.
-  It is a stepping stone towards [ES7 async/await](https://github.com/lukehoban/ecmascript-asyncawait).
+  It is a stepping stone towards the [async/await proposal](https://github.com/lukehoban/ecmascript-asyncawait).
   The primary API change is how `co()` is invoked.
   Before, `co` returned a "thunk", which you then called with a callback and optional arguments.
   Now, `co()` returns a promise.
@@ -47,13 +47,13 @@ fn(true).then(function (val) {
   For versions of node `< 0.11` and for many older browsers,
   you should/must include your own `Promise` polyfill.
 
-  When using node 0.11.x or greater, you must use the `--harmony-generators`
-  flag or just `--harmony` to get access to generators.
-
   When using node 0.10.x and lower or browsers without generator support,
   you must use [gnode](https://github.com/TooTallNate/gnode) and/or [regenerator](http://facebook.github.io/regenerator/).
 
-  io.js is supported out of the box, you can use `co` without flags or polyfills.
+  When using node 0.11.x, you must use the `--harmony-generators`
+  flag or just `--harmony` to get access to generators.
+
+  Node v4+ is supported out of the box, you can use `co` without flags or polyfills.
 
 ## Installation
 
